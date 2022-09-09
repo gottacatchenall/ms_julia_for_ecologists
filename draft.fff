@@ -1,0 +1,6 @@
+\begin{figure}
+\centering
+\includegraphics{./figures/multiple_dispatch.png}
+\caption{TODO: caption. Adapted from Karpinski 2019 ``The unreasonable
+effectiveness of multiple dispatch''}
+\end{figure}

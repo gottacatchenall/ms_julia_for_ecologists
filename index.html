@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Solving the <span class="math inline"><em>n</em></span>-language problem in ecology</title>
+    <title>Solving the <span class="math inline"><em>n</em></span>-language problem: A ecologist’s guide to learning Julia</title>
     <script src="https://hypothes.is/embed.js" async></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
@@ -170,7 +170,7 @@
 <body>
     <header>
         <div class="container">
-            <div class="header--title">Solving the <span class="math inline"><em>n</em></span>-language problem in ecology</div>
+            <div class="header--title">Solving the <span class="math inline"><em>n</em></span>-language problem: A ecologist’s guide to learning Julia</div>
             <div class="header--authors">
                 <span class="header--author">
                 <a href="https://orcid.org/0000-0002-6506-6487" target="_blank">
@@ -234,9 +234,11 @@
             <p>The so-called “two-language problem” in computational science, where it is easier for a researcher to developer a prototype of a model/simulation in a high-level language, like Python or R, and later have to port the model to a lower-level compiled language because the performance of these compiled languages (e.g. C++/Fortran) is orders of magnitude faster than high level interpreted languages. In fact, many of the most popular tools in higher-level languages are actually thin wrappers around a compiled (often C++) base (e.g. tidyverse, keras, numpy, TensorFlow, scikit-learn, pandas, etc.). However, the skills required to use or debug—let alone write—scientific software in these lower level langauges is not often taught.</p>
             <p>We propose that that Julia has certain properties absent in other popular languages for scientific computing that make it particularly suited for the development of a cohesive, modular, and extendible set of tools ideal for the development of a platform for ecological analysis [@].</p>
             <h1 id="the-nature-of-computation-in-julia">The nature of computation in Julia</h1>
+            <figure>
+            <img src="./figures/multiple_dispatch.png" alt="TODO: caption. Adapted from Karpinski 2019 “The unreasonable effectiveness of multiple dispatch”" /><figcaption aria-hidden="true">TODO: caption. Adapted from Karpinski 2019 “The unreasonable effectiveness of multiple dispatch”</figcaption>
+            </figure>
             <h2 id="types">Types</h2>
             <p>Why is this useful for ecologists? Often times in ecology, the same information is represented in different formats. Two packages in R might not agree on what the “correct” format to represent information is.</p>
-            <p><strong>Concept fig here</strong></p>
             <p>At the core of the Julia language is its <em>type system</em>. Type systems can often be alienating to those who learned programming in so-called <em>dynamically</em> typed languages (like R, python, and JavaScript). In dynamically-typed languages, <code>x= 5</code>, and <code>x = "hello world"</code> and the language won’t care that you changed the type of information that was stored in <code>x</code> from a number to a string. Practically, this form of dynamic-typing was adopted because it is far more convenient to write code like that above than defining variables with explicit types, e.g. how you would in C: <code>char c = "a";</code> and <code>int x = 5;</code>.</p>
             <p>Julia doesn’t require explicit type declarations, meaning <code>x = 5</code> is perfectly valid code, but internallyJulia is doing the bookkeeping of what type of information is stored in <code>x</code>, from an <code>Int64</code> to a <code>String</code> in the above example.</p>
             <p>Using explicit types is central to Julia’s speed, but also enables much of its most unique and user-friendly functionality, primarily the use of a <em>multiple-dispatch</em> system.</p>

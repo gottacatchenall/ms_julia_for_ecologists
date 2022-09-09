@@ -210,8 +210,8 @@ urlcolor=blue}
 
 \newcommand{\colorRule}[3][black]{\textcolor[HTML]{#1}{\rule{#2}{#3}}}
 
-\noindent {\LARGE \textbf{\textsf{Solving the \(n\)-language problem in
-ecology}}}
+\noindent {\LARGE \textbf{\textsf{Solving the \(n\)-language problem: A
+ecologist's guide to learning Julia}}}
 
 \medskip
 \begin{flushleft}
@@ -371,14 +371,19 @@ tools ideal for the development of a platform for ecological analysis
 \section{The nature of computation in
 Julia}\label{the-nature-of-computation-in-julia}}
 
+\begin{figure}
+\centering
+\includegraphics{./figures/multiple_dispatch.png}
+\caption{TODO: caption. Adapted from Karpinski 2019 ``The unreasonable
+effectiveness of multiple dispatch''}
+\end{figure}
+
 \hypertarget{types}{%
 \subsection{Types}\label{types}}
 
 Why is this useful for ecologists? Often times in ecology, the same
 information is represented in different formats. Two packages in R might
 not agree on what the ``correct'' format to represent information is.
-
-\textbf{Concept fig here}
 
 At the core of the Julia language is its \emph{type system}. Type
 systems can often be alienating to those who learned programming in
