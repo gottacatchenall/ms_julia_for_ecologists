@@ -1,0 +1,44 @@
+%!TEX TS-program = xelatex
+\documentclass[11pt]{article}
+
+${ _common() }
+${ _pandoc() }
+${ _draft() }
+
+\begin{document}
+\raggedright
+\thispagestyle{empty}
+{\Large\bfseries\sffamily ${ title }}
+\vskip 5em
+
+${ authors:_render_authors()[\quad ] }
+
+${ institutions:_render_institutions()[\quad ] }
+
+${ if(metadata.equalcontributions) }
+${ metadata.equalcontributions:_render_institutions()[; ] }\\
+${ endif }
+
+\textbf{Correspondance to:}\\
+${ for(metadata.corresponding) }
+${ metadata.corresponding.given } ${ metadata.corresponding.family } --- \texttt{${ metadata.corresponding.email }}\\
+${ endfor }
+
+\vfill
+This work is released by its authors under a CC-BY 4.0 license\hfill\ccby\\
+Last revision: \emph{\today}
+
+\clearpage
+\thispagestyle{empty}
+
+\vfill
+${ abstractdata:_render_abstract.tex() }
+\vfill
+
+\clearpage
+\linenumbers
+\pagestyle{normal}
+
+${ body }
+
+\end{document}

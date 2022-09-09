@@ -1,0 +1,113 @@
+name: Compile the document
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  generate:
+    name: Build the sources
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.6]
+        pandoc-version: [2.11.0.4]
+        crossref-version: [0.3.8.3a]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Download and install pandoc
+        run: |
+          wget https://github.com/jgm/pandoc/releases/download/${{ matrix.pandoc-version }}/pandoc-${{ matrix.pandoc-version }}-1-amd64.deb
+          sudo dpkg -i pandoc-${{ matrix.pandoc-version }}-1-amd64.deb
+          rm pandoc-${{ matrix.pandoc-version }}-1-amd64.deb
+      - name: Get the crossref filter
+        run: |
+          wget https://github.com/lierdakil/pandoc-crossref/releases/download/v${{ matrix.crossref-version }}/pandoc-crossref-Linux.tar.xz
+          tar -xf pandoc-crossref-Linux.tar.xz
+      - name: Convert the bib file to json
+        run: |
+          export LANG=en_US.UTF-8
+          pandoc references.bib -t csljson -o references.json
+      - name: Cleanup the bibliography
+        run: python .assets/scripts/bibliography.py
+      - name: Cleanup the affiliations
+        run: python .assets/scripts/affiliations.py
+      - name: Get the citation style file
+        run: python .assets/scripts/citationstyle.py
+      - name: Format the abstract
+        run: python .assets/scripts/abstract.py
+      - name: Prepare the output
+        run: |
+          mkdir -p dist
+          cp -r figures dist/
+          cp references.json dist/
+          cp .assets/logo.png dist/
+          cp author_template.tsv dist/
+      - name: Build the website
+        run: pandoc README.md -o dist/index.html -F pandoc-crossref --citeproc --bibliography=references.json --csl .assets/citationstyle.csl --metadata-file=metadata.json --metadata-file=affiliations.json --metadata-file=abstract.json --template=.assets/templates/index.html
+      - name: Build the tex files
+        run: |
+          pandoc README.md -s -o dist/draft.tex -F pandoc-crossref --citeproc --bibliography=references.json --csl .assets/citationstyle.csl --metadata-file=metadata.json --metadata-file=affiliations.json --metadata-file=abstract.json --template=.assets/templates/draft.tex
+          pandoc README.md -s -o dist/preprint.tex -F pandoc-crossref --citeproc --bibliography=references.json --csl .assets/citationstyle.csl --metadata-file=metadata.json --metadata-file=affiliations.json --metadata-file=abstract.json --template=.assets/templates/preprint.tex
+      - name: Save artifacts
+        if: always()
+        uses: actions/upload-artifact@master
+        with:
+          name: "manuscript"
+          path: dist
+  build:
+    name: Build the PDFs
+    needs: generate
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    strategy:
+      matrix:
+        pdf-version: [preprint, draft]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download dist folder
+        uses: actions/download-artifact@v2
+        with:
+          name: "manuscript"
+          path: dist
+      - name: Build the preprint pdf file
+        uses: xu-cheng/latex-action@master
+        with:
+          working_directory: dist
+          root_file: ${{ matrix.pdf-version }}.tex
+          args: "-f -interaction=nonstopmode -pdf"
+      - name: Cleanup after PDF build
+        uses: xu-cheng/latex-action@master
+        with:
+          working_directory: dist
+          root_file: ${{ matrix.pdf-version }}.tex
+          args: "-c"
+      - name: Save artifacts
+        if: always()
+        uses: actions/upload-artifact@master
+        with:
+          name: "manuscript"
+          path: dist
+  deploy:
+    name: Deploy to gh-pages
+    needs: [generate, build]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download dist folder
+        uses: actions/download-artifact@v2
+        with:
+          name: "manuscript"
+          path: dist
+      - name: "Deploy!"
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: dist # The folder the action should deploy.
