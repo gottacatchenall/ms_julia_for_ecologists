@@ -1,5 +1,5 @@
 {
-  "title": "Julia for Ecologists / 10 Rules for learning/using Julia as an Ecologist",
+  "title": "Solving the $n$-language problem in ecology",
   "authors": [
     {
         "affiliations": [
@@ -29,7 +29,7 @@
     "computational ecology",
     "scientific computing",
     "machine learning",
-    "ecological statistics"
+    "numerical ecology"
   ],
   "citationstyle": "ecology-letters"
 }
