@@ -78,14 +78,15 @@ development of a platform for ecological analysis [@].
 
 # The nature of computation in Julia
 
+![TODO: caption. Adapted from Karpinski 2019 "The unreasonable effectiveness of
+multiple dispatch" ](./figures/multiple_dispatch.png)
+
 ## Types
 
 Why is this useful for ecologists? Often times in ecology, the same information
 is represented in different formats. 
 Two packages in R might not agree on what the "correct" format to represent
 information is. 
-
-**Concept fig here**
 
 
 
