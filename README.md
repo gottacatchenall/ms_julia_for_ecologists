@@ -35,21 +35,38 @@ change on ecosystems the serives they provide, ecologists need a set of
 computational tools [@Urban2022CodLif]. These tools must be performant, but
 crucially modular and interfaceable [@McIntire2022PerRei].
 
-Constraints on have led to the so-called "two-language problem" in computational
-science, where it is easier for a researcher to developer a prototype of a
-model/simulation in a high-level language, like Python or R, and later have to
-port the model to a lower-level compiled language because the performance of
-these compiled languages (e.g. C++/Fortran) is orders of magnitude faster than
-high level interpreted languages.
+Ecological data is often difficult to access and reuse [@Poisot2019EcoDat;
+@Gonzalez2015ActSta]. Many sources of ecological, evolutionary, and
+environmental data exist, but synthesizing this data into a single product
+suitable for analysis often remains tedious as data are not in formats that can
+be easily combined or interfaced. Here we propose that we can solve this problem
+through standardization [@Zimmerman2008NewKno]---developing a common definition such that
+data collected in a variety of contexts can be assimilated while minimizing the
+overhead of data cleaning and wrangling.
 
+A common representation of ecological data will have three primary benefits: it
+will **1**)  enable new forms of analysis by making it easier to combine data
+from different sources [@Heberling2021DatInt], **2)** enable continuous
+integration of new data for next-generation biodiversity monitoring
+[@Kuhl2020EffBio], and **3)** aid in open sharing and reproducability of
+published results [@Borregaard2016MorRep; @Zimmerman2008NewKno]. Here, we
+briefly review approaches to data standardization developed in other fields, in
+order to determine what makes an open standard succeed in promoting data
+sharing, and what doesn't.  Based on the properties of good standards we
+identify, we propose building a living standard for ecological data in the
+`Julia` programming language, and argue this is necessary to obtain the three
+primary benefits of standardization mentioned earlier.
 
-
-In fact, many of the most popular tools in higher-level languages are actually
-thin wrappers around a compiled (often C++) base (e.g. tidyverse, keras, numpy,
-TensorFlow, scikit-learn, pandas, etc.).
-
-However, the skills required to use or debug---let alone write---scientific
-software in these lower level langauges is not often taught. 
+The so-called "two-language problem" in computational science, where it is
+easier for a researcher to developer a prototype of a model/simulation in a
+high-level language, like Python or R, and later have to port the model to a
+lower-level compiled language because the performance of these compiled
+languages (e.g. C++/Fortran) is orders of magnitude faster than high level
+interpreted languages. In fact, many of the most popular tools in higher-level
+languages are actually thin wrappers around a compiled (often C++) base (e.g.
+tidyverse, keras, numpy, TensorFlow, scikit-learn, pandas, etc.). However, the
+skills required to use or debug---let alone write---scientific software in these
+lower level langauges is not often taught. 
 
 We propose that that Julia has certain properties absent in other popular
 languages for scientific computing that make it particularly suited for the
@@ -99,12 +116,6 @@ _Dispatch_ refers to the way a computer program decides what function to call.
 In many staticly-typed languages, you are allow to use the same function name
 more than once. 
 
-
-## Memory
-4. Understand memory allocation 
-5. Use broadcasting
-6. Learn to debug and benchmark softare
-
 # Doing computational science in `Julia`
 
 ## Managing Data
@@ -123,3 +134,24 @@ DataFrames.jl and DFMeta.
 9. Learn how various statistics/simulation libraries work togethe
 
 # Discussion 
+
+Defining a living standard for ecological data in `Julia` will make it easier to
+combine data from different sources by splitting the process of data aggregation
+from the process of analysis. Integrating data from a particular study, or a new
+database, would be as simple as implementing the interface from the data source
+to the standardized types. Data from individual studies could be incorporated
+into public repositories containing both the raw data and the interface to Julia
+data structures, and this combined data/interface package is all that is needed
+to either reproduce the results or incorporate that particular study's data into
+analysis. This will make combining data from multiple sources easier, and yield
+benefits for the development and implementation of novel methods, as the
+software for analysis becomes separate from the software for data cleaning and
+aggregation.
+
+We envision a modern set of tools for ecology in `Julia` based around the
+standardized types. Far outside of ecology, the term "ecosystem" is used
+metaphorically to describe a set of software tools that work together. We
+imagine multiple "trophic-levels" of packages for ecological science in `Julia`
+based around the "basal" set of standardized types --- a modular set of tools
+that can be chained together create arbitrarily complex analysis pipelines. that
+can be scaled to meet the needs of next-generation biodiversity monitoring.
