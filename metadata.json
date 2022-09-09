@@ -1,6 +1,17 @@
 {
-  "title": "Template to prepare preprints and manuscripts using markdown and github actions",
+  "title": "Julia for Ecologists / 10 Rules for learning/using Julia as an Ecologist",
   "authors": [
+    {
+        "affiliations": [
+          "McGill University",
+          "Québec Centre for Biodiversity Sciences"
+        ],
+        "familyname": "Catchen",
+        "givennames": "Michael D.",
+        "status": ["corresponding"],
+        "email": "michael.catchen@mcgill.ca",
+        "orcid": "0000-0002-6506-6487"
+    },
     {
       "affiliations": [
         "Université de Montréal",
@@ -10,37 +21,15 @@
       "givennames": "Timothée",
       "email": "timothee.poisot@umontreal.ca",
       "orcid": "0000-0002-0735-5184",
-      "status": ["corresponding", "equal"]
-    },
-    {
-      "affiliations": [
-        "Inn of the Prancing Pony",
-        "Fellowship of the Ring"
-      ],
-      "familyname": "Took",
-      "givennames": "Peregrin",
-      "email": "pippin@took.shire"
-    },
-    {
-      "affiliations": [
-        "Green Dragon Inn",
-        "Fellowship of the Ring"
-      ],
-      "familyname": "Brandybuck",
-      "givennames": "Merriadoc",
-      "email": "merry@fellowship.ring",
-      "status": ["equal"]
+      "status": []
     }
   ],
-  "abstract": {
-    "Purpose": "This template provides a series of scripts to render a markdown document into an interactive website and a series of PDFs.",
-    "Motivation": "It makes collaborating on text with GitHub easier, and means that we never need to think about the output.",
-    "Internals": "GitHub actions and a series of python scritpts. The markdown is handled with `pandoc`."
-  },
+  "abstract": "Julia is a good language, ecologists should learn it.",
   "keywords": [
-    "pandoc",
-    "pandoc-crossref",
-    "github actions"
+    "computational ecology",
+    "scientific computing",
+    "machine learning",
+    "ecological statistics"
   ],
   "citationstyle": "ecology-letters"
 }
