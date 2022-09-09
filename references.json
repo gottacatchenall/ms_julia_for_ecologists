@@ -1,119 +1,1032 @@
 [
     {
-        "DOI": "10.1002/jez.1400610202",
+        "URL": "http://arxiv.org/abs/1411.1607",
         "author": [
             {
-                "family": "Allee",
-                "given": "W. C."
+                "family": "Bezanson",
+                "given": "Jeff"
             },
             {
-                "family": "Bowen",
-                "given": "Edith S."
-            }
-        ],
-        "container-title": "Journal of Experimental Zoology",
-        "id": "Allee1932StuAni",
-        "issue": "2",
-        "issued": {
-            "date-parts": [
-                [
-                    1932,
-                    2
-                ]
-            ]
-        },
-        "page": "185-207",
-        "title": "Studies in animal aggregations: Mass protection against colloidal silver among goldfishes",
-        "type": "article-journal",
-        "volume": "61"
-    },
-    {
-        "author": [
-            {
-                "family": "Camerano",
-                "given": "Lorenzo"
-            }
-        ],
-        "container-title": "Atti Della R. Accad. Delle Sci. Torino",
-        "id": "Camerano1880EquViv",
-        "issued": {
-            "date-parts": [
-                [
-                    1880
-                ]
-            ]
-        },
-        "page": "393-414",
-        "title": "Dell\u2019equilibrio dei viventi merce la reciproca distruzione",
-        "type": "article-journal",
-        "volume": "15"
-    },
-    {
-        "author": [
-            {
-                "family": "Elton",
-                "given": "Charles S"
-            }
-        ],
-        "id": "Elton1927AniEco",
-        "issued": {
-            "date-parts": [
-                [
-                    1927
-                ]
-            ]
-        },
-        "publisher": "University of Chicago Press",
-        "title": "Animal ecology",
-        "type": "book"
-    },
-    {
-        "author": [
-            {
-                "family": "Fahrenholz",
-                "given": "H."
-            }
-        ],
-        "container-title": "Zool. Anz.",
-        "id": "Fahrenholz1913EctUnd",
-        "issued": {
-            "date-parts": [
-                [
-                    1913
-                ]
-            ]
-        },
-        "page": "371-374",
-        "title": "Ectoparasiten und abstammungslehre",
-        "type": "article-journal",
-        "volume": "41"
-    },
-    {
-        "DOI": "10.1111/j.1096-3642.1935.tb01680.x",
-        "author": [
-            {
-                "family": "Nicholson",
-                "given": "A. J."
+                "family": "Edelman",
+                "given": "Alan"
             },
             {
-                "family": "Bailey",
-                "given": "V. A."
+                "family": "Karpinski",
+                "given": "Stefan"
+            },
+            {
+                "family": "Shah",
+                "given": "Viral B."
             }
         ],
-        "container-title": "Proceedings of the Zoological Society of London",
-        "id": "Nicholson1935BalAni",
+        "container-title": "arXiv:1411.1607 [cs]",
+        "id": "Bezanson2015JulFre",
+        "issued": {
+            "date-parts": [
+                [
+                    2015
+                ]
+            ]
+        },
+        "title": "Julia: A Fresh Approach to Numerical Computing",
+        "type": "article-journal"
+    },
+    {
+        "DOI": "10.21105/joss.02704",
+        "author": [
+            {
+                "family": "Blaom",
+                "given": "Anthony D."
+            },
+            {
+                "family": "Kiraly",
+                "given": "Franz"
+            },
+            {
+                "family": "Lienart",
+                "given": "Thibaut"
+            },
+            {
+                "family": "Simillides",
+                "given": "Yiannis"
+            },
+            {
+                "family": "Arenas",
+                "given": "Diego"
+            },
+            {
+                "family": "Vollmer",
+                "given": "Sebastian J."
+            }
+        ],
+        "container-title": "Journal of Open Source Software",
+        "id": "Blaom2020MljJul",
+        "issue": "55",
+        "issued": {
+            "date-parts": [
+                [
+                    2020
+                ]
+            ]
+        },
+        "page": "2704",
+        "title": "MLJ: A Julia package for composable machine learning",
+        "type": "article-journal",
+        "volume": "5"
+    },
+    {
+        "DOI": "10.1111/ecog.02493",
+        "author": [
+            {
+                "family": "Borregaard",
+                "given": "Michael Krabbe"
+            },
+            {
+                "family": "Hart",
+                "given": "Edmund M."
+            }
+        ],
+        "container-title": "Ecography",
+        "id": "Borregaard2016MorRep",
+        "issue": "4",
+        "issued": {
+            "date-parts": [
+                [
+                    2016
+                ]
+            ]
+        },
+        "page": "349-353",
+        "title": "Towards a more reproducible ecology",
+        "type": "article-journal",
+        "volume": "39"
+    },
+    {
+        "DOI": "10.21105/joss.02872",
+        "author": [
+            {
+                "family": "Dansereau",
+                "given": "Gabriel"
+            },
+            {
+                "family": "Poisot",
+                "given": "Timoth\u00e9e"
+            }
+        ],
+        "container-title": "Journal of Open Source Software",
+        "id": "Dansereau2021SimJl",
+        "issue": "57",
+        "issued": {
+            "date-parts": [
+                [
+                    2021
+                ]
+            ]
+        },
+        "page": "2872",
+        "title": "SimpleSDMLayers.jl and GBIF.jl: A Framework for Species Distribution Modeling in Julia",
+        "type": "article-journal",
+        "volume": "6"
+    },
+    {
+        "author": [
+            {
+                "family": "Ge",
+                "given": "Hong"
+            },
+            {
+                "family": "Xu",
+                "given": "Kai"
+            },
+            {
+                "family": "Ghahramani",
+                "given": "Zoubin"
+            }
+        ],
+        "container-title": "Proceedings of the Twenty-First International Conference on Artificial Intelligence and Statistics",
+        "id": "Ge2018TurLan",
+        "issued": {
+            "date-parts": [
+                [
+                    2018
+                ]
+            ]
+        },
+        "page": "1682-1690",
+        "publisher": "PMLR",
+        "title": "Turing: A Language for Flexible Probabilistic Inference",
+        "type": "paper-conference"
+    },
+    {
+        "DOI": "10.3354/meps12149",
+        "author": [
+            {
+                "family": "Giron-Nava",
+                "given": "A"
+            },
+            {
+                "family": "James",
+                "given": "Cc"
+            },
+            {
+                "family": "Johnson",
+                "given": "Af"
+            },
+            {
+                "family": "Dannecker",
+                "given": "D"
+            },
+            {
+                "family": "Kolody",
+                "given": "B"
+            },
+            {
+                "family": "Lee",
+                "given": "A"
+            },
+            {
+                "family": "Nagarkar",
+                "given": "M"
+            },
+            {
+                "family": "Pao",
+                "given": "Gm"
+            },
+            {
+                "family": "Ye",
+                "given": "H"
+            },
+            {
+                "family": "Johns",
+                "given": "Dg"
+            },
+            {
+                "family": "Sugihara",
+                "given": "G"
+            }
+        ],
+        "container-title": "Marine Ecology Progress Series",
+        "id": "Giron-Nava2017QuaArg",
+        "issued": {
+            "date-parts": [
+                [
+                    2017
+                ]
+            ]
+        },
+        "page": "269-274",
+        "title": "Quantitative argument for long-term ecological monitoring",
+        "type": "article-journal",
+        "volume": "572"
+    },
+    {
+        "DOI": "10.1038/520436c",
+        "author": [
+            {
+                "family": "Gonzalez",
+                "given": "Andrew"
+            },
+            {
+                "family": "Peres-Neto",
+                "given": "Pedro R."
+            }
+        ],
+        "container-title": "Nature",
+        "id": "Gonzalez2015ActSta",
+        "issue": "7548",
+        "issued": {
+            "date-parts": [
+                [
+                    2015
+                ]
+            ]
+        },
+        "page": "436-436",
+        "publisher": "Nature Publishing Group",
+        "title": "Act to staunch loss of research data",
+        "type": "article-journal",
+        "volume": "520"
+    },
+    {
+        "DOI": "10.1890/120103",
+        "author": [
+            {
+                "family": "Hampton",
+                "given": "Stephanie E."
+            },
+            {
+                "family": "Strasser",
+                "given": "Carly A."
+            },
+            {
+                "family": "Tewksbury",
+                "given": "Joshua J."
+            },
+            {
+                "family": "Gram",
+                "given": "Wendy K."
+            },
+            {
+                "family": "Budden",
+                "given": "Amber E."
+            },
+            {
+                "family": "Batcheller",
+                "given": "Archer L."
+            },
+            {
+                "family": "Duke",
+                "given": "Clifford S."
+            },
+            {
+                "family": "Porter",
+                "given": "John H."
+            }
+        ],
+        "container-title": "Frontiers in Ecology and the Environment",
+        "id": "Hampton2013BigDat",
         "issue": "3",
         "issued": {
             "date-parts": [
                 [
-                    1935,
-                    9
+                    2013
                 ]
             ]
         },
-        "page": "551-598",
-        "title": "The Balance of Animal Populations.Part I.",
+        "page": "156-162",
+        "title": "Big data and the future of ecology",
         "type": "article-journal",
-        "volume": "105"
+        "volume": "11"
+    },
+    {
+        "DOI": "10.5281/zenodo.4716816",
+        "author": [
+            {
+                "family": "Harris",
+                "given": "Claire"
+            },
+            {
+                "family": "Reeve",
+                "given": "Richard"
+            }
+        ],
+        "id": "Harris2021EcoJl",
+        "issued": {
+            "date-parts": [
+                [
+                    2021
+                ]
+            ]
+        },
+        "publisher": "Zenodo",
+        "title": "EcoSISTEM.jl - Ecosystem Simulation through Integrated Species-Trait Environment Modelling",
+        "type": ""
+    },
+    {
+        "DOI": "10.1073/pnas.2018093118",
+        "author": [
+            {
+                "family": "Heberling",
+                "given": "J. Mason"
+            },
+            {
+                "family": "Miller",
+                "given": "Joseph T."
+            },
+            {
+                "family": "Noesgaard",
+                "given": "Daniel"
+            },
+            {
+                "family": "Weingart",
+                "given": "Scott B."
+            },
+            {
+                "family": "Schigel",
+                "given": "Dmitry"
+            }
+        ],
+        "chapter-number": "Biological Sciences",
+        "container-title": "Proceedings of the National Academy of Sciences",
+        "id": "Heberling2021DatInt",
+        "issue": "6",
+        "issued": {
+            "date-parts": [
+                [
+                    2021
+                ]
+            ]
+        },
+        "publisher": "National Academy of Sciences",
+        "title": "Data integration enables global biodiversity synthesis",
+        "type": "article-journal",
+        "volume": "118"
+    },
+    {
+        "id": "IndMod",
+        "publisher": "https://www.degruyter.com/document/doi/10.1515/9781400850624/html",
+        "title": "Individual-based Modeling and Ecology",
+        "type": ""
+    },
+    {
+        "DOI": "10.21105/joss.00602",
+        "author": [
+            {
+                "family": "Innes",
+                "given": "Mike"
+            }
+        ],
+        "container-title": "Journal of Open Source Software",
+        "id": "Innes2018FluEle",
+        "issue": "25",
+        "issued": {
+            "date-parts": [
+                [
+                    2018
+                ]
+            ]
+        },
+        "page": "602",
+        "title": "Flux: Elegant machine learning with Julia",
+        "type": "article-journal",
+        "volume": "3"
+    },
+    {
+        "author": [
+            {
+                "family": "Jones",
+                "given": "Campbell"
+            }
+        ],
+        "container-title": "Philosophy Today",
+        "id": "Jones2010SubSup",
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2010
+                ]
+            ]
+        },
+        "page": "30-39",
+        "publisher": "Philosophy Documentation Center",
+        "publisher-place": "Charlottesville, United States",
+        "title": "The Subject Supposed to Recycle",
+        "type": "article-journal",
+        "volume": "54"
+    },
+    {
+        "DOI": "10.5063/F11834T2",
+        "author": [
+            {
+                "family": "Jones",
+                "given": "Matthew"
+            },
+            {
+                "family": "O\u2019Brien",
+                "given": "Margaret"
+            },
+            {
+                "family": "Mecum",
+                "given": "Bryce"
+            },
+            {
+                "family": "Boettiger",
+                "given": "Carl"
+            },
+            {
+                "family": "Schildhauer",
+                "given": "Mark"
+            },
+            {
+                "family": "Maier",
+                "given": "Mitchell"
+            },
+            {
+                "family": "Whiteaker",
+                "given": "Timothy"
+            },
+            {
+                "family": "Earl",
+                "given": "Stevan"
+            },
+            {
+                "family": "Chong",
+                "given": "Steven"
+            }
+        ],
+        "id": "Jones2019EcoMet",
+        "issued": {
+            "date-parts": [
+                [
+                    2019
+                ]
+            ]
+        },
+        "publisher": "KNB Data Repository",
+        "title": "Ecological Metadata Language version 2.2.0",
+        "type": ""
+    },
+    {
+        "DOI": "10.1126/science.1197891",
+        "author": [
+            {
+                "family": "Kahn",
+                "given": "S. D."
+            }
+        ],
+        "container-title": "Science",
+        "id": "Kahn2011FutGen",
+        "issue": "6018",
+        "issued": {
+            "date-parts": [
+                [
+                    2011
+                ]
+            ]
+        },
+        "page": "728-729",
+        "title": "On the Future of Genomic Data",
+        "type": "article-journal",
+        "volume": "331"
+    },
+    {
+        "DOI": "10.1016/j.oneear.2020.09.010",
+        "author": [
+            {
+                "family": "K\u00fchl",
+                "given": "Hjalmar S."
+            },
+            {
+                "family": "Bowler",
+                "given": "Diana E."
+            },
+            {
+                "family": "B\u00f6sch",
+                "given": "Lukas"
+            },
+            {
+                "family": "Bruelheide",
+                "given": "Helge"
+            },
+            {
+                "family": "Dauber",
+                "given": "Jens"
+            },
+            {
+                "family": "Eichenberg",
+                "given": "David."
+            },
+            {
+                "family": "Eisenhauer",
+                "given": "Nico"
+            },
+            {
+                "family": "Fern\u00e1ndez",
+                "given": "N\u00e9stor"
+            },
+            {
+                "family": "Guerra",
+                "given": "Carlos A."
+            },
+            {
+                "family": "Henle",
+                "given": "Klaus"
+            },
+            {
+                "family": "Herbinger",
+                "given": "Ilka"
+            },
+            {
+                "family": "Isaac",
+                "given": "Nick J. B."
+            },
+            {
+                "family": "Jansen",
+                "given": "Florian"
+            },
+            {
+                "family": "K\u00f6nig-Ries",
+                "given": "Birgitta"
+            },
+            {
+                "family": "K\u00fchn",
+                "given": "Ingolf"
+            },
+            {
+                "family": "Nilsen",
+                "given": "Erlend B."
+            },
+            {
+                "family": "Pe\u2019er",
+                "given": "Guy"
+            },
+            {
+                "family": "Richter",
+                "given": "Anett"
+            },
+            {
+                "family": "Schulte",
+                "given": "Ralf"
+            },
+            {
+                "family": "Settele",
+                "given": "Josef"
+            },
+            {
+                "family": "Dam",
+                "given": "Nicole M.",
+                "non-dropping-particle": "van"
+            },
+            {
+                "family": "Voigt",
+                "given": "Maria"
+            },
+            {
+                "family": "W\u00e4gele",
+                "given": "Wolfgang J."
+            },
+            {
+                "family": "Wirth",
+                "given": "Christian"
+            },
+            {
+                "family": "Bonn",
+                "given": "Aletta"
+            }
+        ],
+        "container-title": "One Earth",
+        "id": "Kuhl2020EffBio",
+        "issue": "4",
+        "issued": {
+            "date-parts": [
+                [
+                    2020
+                ]
+            ]
+        },
+        "page": "462-474",
+        "title": "Effective Biodiversity Monitoring Needs a Culture of Integration",
+        "type": "article-journal",
+        "volume": "3"
+    },
+    {
+        "author": [
+            {
+                "family": "Maynard-Smith",
+                "given": "John"
+            }
+        ],
+        "id": "Maynard-Smith1974ModEco",
+        "issued": {
+            "date-parts": [
+                [
+                    1974
+                ]
+            ]
+        },
+        "publisher": "CUP Archive",
+        "title": "Models in Ecology",
+        "type": "book"
+    },
+    {
+        "DOI": "10.1111/ele.13994",
+        "author": [
+            {
+                "family": "McIntire",
+                "given": "Eliot J. B."
+            },
+            {
+                "family": "Chubaty",
+                "given": "Alex M."
+            },
+            {
+                "family": "Cumming",
+                "given": "Steven G."
+            },
+            {
+                "family": "Andison",
+                "given": "Dave"
+            },
+            {
+                "family": "Barros",
+                "given": "Ceres"
+            },
+            {
+                "family": "Boisvenue",
+                "given": "C\u00e9line"
+            },
+            {
+                "family": "Hach\u00e9",
+                "given": "Samuel"
+            },
+            {
+                "family": "Luo",
+                "given": "Yong"
+            },
+            {
+                "family": "Micheletti",
+                "given": "Tatiane"
+            },
+            {
+                "family": "Stewart",
+                "given": "Frances E. C."
+            }
+        ],
+        "container-title": "Ecology Letters",
+        "id": "McIntire2022PerRei",
+        "issue": "6",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "page": "1345-1351",
+        "title": "PERFICT: A Re-imagined foundation for predictive ecology",
+        "type": "article-journal",
+        "volume": "25"
+    },
+    {
+        "DOI": "10.1002/ecm.1359",
+        "author": [
+            {
+                "family": "Pennekamp",
+                "given": "Frank"
+            },
+            {
+                "family": "Iles",
+                "given": "Alison C."
+            },
+            {
+                "family": "Garland",
+                "given": "Joshua"
+            },
+            {
+                "family": "Brennan",
+                "given": "Georgina"
+            },
+            {
+                "family": "Brose",
+                "given": "Ulrich"
+            },
+            {
+                "family": "Gaedke",
+                "given": "Ursula"
+            },
+            {
+                "family": "Jacob",
+                "given": "Ute"
+            },
+            {
+                "family": "Kratina",
+                "given": "Pavel"
+            },
+            {
+                "family": "Matthews",
+                "given": "Blake"
+            },
+            {
+                "family": "Munch",
+                "given": "Stephan"
+            },
+            {
+                "family": "Novak",
+                "given": "Mark"
+            },
+            {
+                "family": "Palamara",
+                "given": "Gian Marco"
+            },
+            {
+                "family": "Rall",
+                "given": "Bj\u00f6rn C."
+            },
+            {
+                "family": "Rosenbaum",
+                "given": "Benjamin"
+            },
+            {
+                "family": "Tabi",
+                "given": "Andrea"
+            },
+            {
+                "family": "Ward",
+                "given": "Colette"
+            },
+            {
+                "family": "Williams",
+                "given": "Richard"
+            },
+            {
+                "family": "Ye",
+                "given": "Hao"
+            },
+            {
+                "family": "Petchey",
+                "given": "Owen L."
+            }
+        ],
+        "container-title": "Ecological Monographs",
+        "id": "Pennekamp2019IntPre",
+        "issue": "2",
+        "issued": {
+            "date-parts": [
+                [
+                    2019
+                ]
+            ]
+        },
+        "page": "e01359",
+        "title": "The intrinsic predictability of ecological time series and its potential to guide forecasting",
+        "type": "article-journal",
+        "volume": "89"
+    },
+    {
+        "DOI": "10.1016/j.tree.2019.04.005",
+        "author": [
+            {
+                "family": "Poisot",
+                "given": "Timoth\u00e9e"
+            },
+            {
+                "family": "Bruneau",
+                "given": "Anne"
+            },
+            {
+                "family": "Gonzalez",
+                "given": "Andrew"
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "Peres-Neto",
+                "given": "Pedro"
+            }
+        ],
+        "container-title": "Trends in Ecology & Evolution",
+        "id": "Poisot2019EcoDat",
+        "issue": "6",
+        "issued": {
+            "date-parts": [
+                [
+                    2019
+                ]
+            ]
+        },
+        "page": "494-496",
+        "title": "Ecological Data Should Not Be So Hard to Find and Reuse",
+        "type": "article-journal",
+        "volume": "34"
+    },
+    {
+        "DOI": "10.5334/jors.151",
+        "author": [
+            {
+                "family": "Rackauckas",
+                "given": "Christopher"
+            },
+            {
+                "family": "Nie",
+                "given": "Qing"
+            }
+        ],
+        "container-title": "Journal of Open Research Software",
+        "id": "Rackauckas2017DifJl",
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2017
+                ]
+            ]
+        },
+        "page": "15",
+        "publisher": "Ubiquity Press",
+        "title": "DifferentialEquations.jl  A Performant and Feature-Rich Ecosystem for Solving Differential Equations in Julia",
+        "type": "article-journal",
+        "volume": "5"
+    },
+    {
+        "DOI": "10.1093/biosci/biab099",
+        "author": [
+            {
+                "family": "Urban",
+                "given": "Mark C"
+            },
+            {
+                "family": "Travis",
+                "given": "Justin M J"
+            },
+            {
+                "family": "Zurell",
+                "given": "Damaris"
+            },
+            {
+                "family": "Thompson",
+                "given": "Patrick L"
+            },
+            {
+                "family": "Synes",
+                "given": "Nicholas W"
+            },
+            {
+                "family": "Scarpa",
+                "given": "Alice"
+            },
+            {
+                "family": "Peres-Neto",
+                "given": "Pedro R"
+            },
+            {
+                "family": "Malchow",
+                "given": "Anne-Kathleen"
+            },
+            {
+                "family": "James",
+                "given": "Patrick M A"
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "De Meester",
+                "given": "Luc"
+            },
+            {
+                "family": "Brown",
+                "given": "Calum"
+            },
+            {
+                "family": "Bocedi",
+                "given": "Greta"
+            },
+            {
+                "family": "Albert",
+                "given": "C\u00e9cile H"
+            },
+            {
+                "family": "Gonzalez",
+                "given": "Andrew"
+            },
+            {
+                "family": "Hendry",
+                "given": "Andrew P"
+            }
+        ],
+        "container-title": "BioScience",
+        "id": "Urban2022CodLif",
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "page": "91-104",
+        "title": "Coding for Life: Designing a Platform for Projecting and Protecting Global Biodiversity",
+        "type": "article-journal",
+        "volume": "72"
+    },
+    {
+        "DOI": "10.1093/biosci/biz133",
+        "author": [
+            {
+                "family": "Woolley",
+                "given": "Skipton N C"
+            },
+            {
+                "family": "Foster",
+                "given": "Scott D"
+            },
+            {
+                "family": "Bax",
+                "given": "Nicholas J"
+            },
+            {
+                "family": "Currie",
+                "given": "Jock C"
+            },
+            {
+                "family": "Dunn",
+                "given": "Daniel C"
+            },
+            {
+                "family": "Hansen",
+                "given": "Cecilie"
+            },
+            {
+                "family": "Hill",
+                "given": "Nicole"
+            },
+            {
+                "family": "O\u2019Hara",
+                "given": "Timothy D"
+            },
+            {
+                "family": "Ovaskainen",
+                "given": "Otso"
+            },
+            {
+                "family": "Sayre",
+                "given": "Roger"
+            },
+            {
+                "family": "Vanhatalo",
+                "given": "Jarno P"
+            },
+            {
+                "family": "Dunstan",
+                "given": "Piers K"
+            }
+        ],
+        "container-title": "BioScience",
+        "id": "Woolley2020BioMar",
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2020
+                ]
+            ]
+        },
+        "page": "48-59",
+        "title": "Bioregions in Marine Environments: Combining Biological and Environmental Data for Management and Scientific Understanding",
+        "type": "article-journal",
+        "volume": "70"
+    },
+    {
+        "id": "WorGui",
+        "publisher": "https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.13793",
+        "title": "A working guide to spatial mechanistic modelling in Julia - Schouten - 2022 - Methods in Ecology and Evolution - Wiley Online Library",
+        "type": ""
+    },
+    {
+        "DOI": "10.1177/0162243907306704",
+        "author": [
+            {
+                "family": "Zimmerman",
+                "given": "Ann S."
+            }
+        ],
+        "container-title": "Science, Technology, & Human Values",
+        "id": "Zimmerman2008NewKno",
+        "issue": "5",
+        "issued": {
+            "date-parts": [
+                [
+                    2008
+                ]
+            ]
+        },
+        "page": "631-652",
+        "title": "New Knowledge from Old Data: The Role of Standards in the Sharing and Reuse of Ecological Data",
+        "type": "article-journal",
+        "volume": "33"
     }
 ]
