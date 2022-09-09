@@ -30,9 +30,9 @@
 3. Learn about dispatch
 4. Understand memory allocation 
 5. Use broadcasting
-6. Learn about the statistics ecosystem: StatsBase, Statistics, GLM, MLJ, Flux,
+6. Learn to debug and benchmark softare
+7. Learn about the statistics ecosystem: StatsBase, Statistics, GLM, MLJ, Flux,
    Turing 
-7. Learn about the simulation libraries (DiffEq, DynamicGrids)
-8. Learn how various statistics/simulation libraries work together
-9.  
+8. Learn about the simulation libraries (DiffEq, DynamicGrids)
+9. Learn how various statistics/simulation libraries work together
 10. Contribute to open-source community 
