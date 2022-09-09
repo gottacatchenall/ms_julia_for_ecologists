@@ -10,6 +10,9 @@
    sodipodi:docname="multiple_dispatch.svg"
    inkscape:version="1.2 (1:1.2.1+202207142221+cd75a1ee6d)"
    xml:space="preserve"
+   inkscape:export-filename="multiple_dispatch.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -25,9 +28,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.73165365"
-     inkscape:cx="276.08692"
-     inkscape:cy="408.66331"
+     inkscape:zoom="1.4633073"
+     inkscape:cx="633.49646"
+     inkscape:cy="545.34"
      inkscape:window-width="1904"
      inkscape:window-height="971"
      inkscape:window-x="8"
@@ -622,7 +625,9 @@
    style="font-style:italic;font-variant:normal;font-weight:300;font-stretch:normal;font-family:'Iosevka Term';-inkscape-font-specification:'Iosevka Term Light Italic'"
    id="tspan16293">Tabby</tspan> <tspan
    style="fill:#ffffff;fill-opacity:1"
-   id="tspan15545">and</tspan> barks</tspan></text><text
+   id="tspan15545">and</tspan> <tspan
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Iosevka Term';-inkscape-font-specification:'Iosevka Term Medium Italic';fill:#d08770;fill-opacity:1"
+   id="tspan7879">barks</tspan></tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Iosevka Term';-inkscape-font-specification:'Iosevka Term';fill:#eceff4;fill-opacity:1;stroke-width:0.264583"
        x="152.91112"
@@ -640,7 +645,9 @@
    style="font-style:italic;font-variant:normal;font-weight:300;font-stretch:normal;font-family:'Iosevka Term';-inkscape-font-specification:'Iosevka Term Light Italic'"
    id="tspan16291">Sparky</tspan> <tspan
    style="fill:#ffffff;fill-opacity:1"
-   id="tspan14815">and</tspan> sniffs</tspan></text><text
+   id="tspan14815">and</tspan> <tspan
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Iosevka Term';-inkscape-font-specification:'Iosevka Term Medium Italic';fill:#d08770;fill-opacity:1"
+   id="tspan7877">sniffs</tspan></tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Iosevka Term';-inkscape-font-specification:'Iosevka Term';fill:#eceff4;fill-opacity:1;stroke-width:0.264583"
        x="152.91112"
@@ -658,7 +665,9 @@
    style="font-style:italic;font-variant:normal;font-weight:300;font-stretch:normal;font-family:'Iosevka Term';-inkscape-font-specification:'Iosevka Term Light Italic'"
    id="tspan16289">Sparky</tspan> <tspan
    style="fill:#ffffff;fill-opacity:1"
-   id="tspan15553">and</tspan> hisses</tspan></text><text
+   id="tspan15553">and</tspan> <tspan
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Iosevka Term';-inkscape-font-specification:'Iosevka Term Medium Italic';fill:#d08770;fill-opacity:1"
+   id="tspan7875">hisses</tspan></tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Iosevka Term';-inkscape-font-specification:'Iosevka Term';fill:#eceff4;fill-opacity:1;stroke-width:0.264583"
        x="152.91112"
@@ -674,4 +683,6 @@
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Iosevka Term';-inkscape-font-specification:'Iosevka Term';fill:#ffffff;fill-opacity:1"
    id="tspan12945">meets</tspan> Panko <tspan
    style="fill:#ffffff;fill-opacity:1"
-   id="tspan15557">and</tspan> slinks</tspan></text></g></svg>
+   id="tspan15557">and</tspan> <tspan
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Iosevka Term';-inkscape-font-specification:'Iosevka Term Medium Italic';fill:#d08770;fill-opacity:1"
+   id="tspan7873">slinks</tspan></tspan></text></g></svg>
