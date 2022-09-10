@@ -1,14 +1,38 @@
 
 # Outline
 
+An ecologists guide to learning Julia
+
+
+- Why should ecologists learn Julia?
+  - No point ignoring the elephant in the room: R is by far the most used language in ecology
+  - But many of the problems in contemporary ecology require functionality that R just can't handle (mass individual-based models, big data management, quick numerical methods)
+  - `julia` has particular features that solve a broad chunk of the difficulties of computational analysis of ecological data
+    - and improves user experience by enabling code that is _idiomatic_.
+  - this makes julia well suited to become "[a platform for ecological prediction and forecasting]; McIntyre etal, Urban etal
+
+- In what order should people approach new topics
+  - understand the core concepts that make julia different from other languages first
+    - Types
+    - multiple dispatch
+  - Learn data management in Julia (emphasize analogies to tidyverse)
+    - DataFrames
+  - Learn stats/ml in Julia (emphasize anologies to GLM in R and scikit-learn/tensorflow in python)
+  - Learn visualization (Makie)
+
+- Discussion
+  - Talk about adjacent scientific computing course
+  - What does the future of computing in ecology look like?
+
+---
 - Why should ecologists learn julia?
-    - Well, there are the criteria that are directly measureble that make it
+    - Well, there are the criteria that are directly measurable that make it
       better than R/Python:
         - fast
         - native support on GPUs
     - But there are also criteria that are more subjective, and that take
       experience and practice using the language to appreciate
-        - clever use of dispatch patterns 
+        - clever use of dispatch patterns
         - use of one-lienrs
         - using parameterized types well
     - You will learn how to be a better programmer in _any_ language, because
@@ -31,19 +55,33 @@
 
 
 In order to measure, understand, and mitigate the consequences of anthropogenic
-change on ecosystems the serives they provide, ecologists need a set of
-computational tools [@Urban2022CodLif]. These tools must be performant, but
-crucially modular and interfaceable [@McIntire2022PerRei].
+change on ecosystems the services they provide, ecologists need a modern set of
+computational tools [@Urban2022CodLif].
+
+These tools must be performant, but crucially modular and interfaceable [@McIntire2022PerRei]
+
+The so-called "two-language problem" in computational science, where it is
+easier for a researcher to developer a prototype of a model/simulation in a
+high-level language, like Python or R, and later have to port the model to a
+lower-level compiled language because the performance of these compiled
+languages (e.g. C++/Fortran) is orders of magnitude faster than high level
+interpreted languages. In fact, many of the most popular tools in higher-level
+languages are actually thin wrappers around a compiled (often C++) base (e.g.
+tidyverse, keras, numpy, TensorFlow, scikit-learn, pandas, etc.). However, the
+skills required to use or debug---let alone write---scientific software in these
+lower level langauges is not often taught.
+
+
 
 Ecological data is often difficult to access and reuse [@Poisot2019EcoDat;
-@Gonzalez2015ActSta]. Many sources of ecological, evolutionary, and
-environmental data exist, but synthesizing this data into a single product
+@Gonzalez2015ActSta]. Synthesizing data into a single product
 suitable for analysis often remains tedious as data are not in formats that can
-be easily combined or interfaced. Here we propose that we can solve this problem
+be easily combined or interfaced.
+
+Here we propose that we can solve this problem
 through standardization [@Zimmerman2008NewKno]---developing a common definition such that
 data collected in a variety of contexts can be assimilated while minimizing the
 overhead of data cleaning and wrangling.
-
 A common representation of ecological data will have three primary benefits: it
 will **1**)  enable new forms of analysis by making it easier to combine data
 from different sources [@Heberling2021DatInt], **2)** enable continuous
@@ -56,17 +94,6 @@ sharing, and what doesn't.  Based on the properties of good standards we
 identify, we propose building a living standard for ecological data in the
 `Julia` programming language, and argue this is necessary to obtain the three
 primary benefits of standardization mentioned earlier.
-
-The so-called "two-language problem" in computational science, where it is
-easier for a researcher to developer a prototype of a model/simulation in a
-high-level language, like Python or R, and later have to port the model to a
-lower-level compiled language because the performance of these compiled
-languages (e.g. C++/Fortran) is orders of magnitude faster than high level
-interpreted languages. In fact, many of the most popular tools in higher-level
-languages are actually thin wrappers around a compiled (often C++) base (e.g.
-tidyverse, keras, numpy, TensorFlow, scikit-learn, pandas, etc.). However, the
-skills required to use or debug---let alone write---scientific software in these
-lower level langauges is not often taught. 
 
 We propose that that Julia has certain properties absent in other popular
 languages for scientific computing that make it particularly suited for the
@@ -84,9 +111,9 @@ multiple dispatch" ](./figures/multiple_dispatch.png)
 ## Types
 
 Why is this useful for ecologists? Often times in ecology, the same information
-is represented in different formats. 
+is represented in different formats.
 Two packages in R might not agree on what the "correct" format to represent
-information is. 
+information is.
 
 
 
@@ -97,7 +124,7 @@ languages (like R, python, and JavaScript). In dynamically-typed languages,  `x=
 type of information that was stored in `x` from a number to a string.
 Practically, this form of dynamic-typing was adopted because it is far more
 convenient to write code like that above than defining variables with explicit
-types, e.g. how you would in C: `char c = "a";` and `int x = 5;`. 
+types, e.g. how you would in C: `char c = "a";` and `int x = 5;`.
 
 
 Julia doesn't require explicit type declarations, meaning `x = 5` is perfectly
@@ -108,25 +135,25 @@ example.
 
 Using explicit types is central to Julia's speed, but also enables much of its
 most unique and user-friendly functionality, primarily the use of a
-_multiple-dispatch_ system. 
+_multiple-dispatch_ system.
 
 ## Dispatch
 
-_Dispatch_ refers to the way a computer program decides what function to call. 
+_Dispatch_ refers to the way a computer program decides what function to call.
 
 In many staticly-typed languages, you are allow to use the same function name
-more than once. 
+more than once.
 
 # Doing computational science in `Julia`
 
 ## Managing Data
 
-DataFrames.jl and DFMeta. 
+DataFrames.jl and DFMeta.
 
 ## Doing statistics and machine learning
 
 7. Learn about the statistics ecosystem: StatsBase, Statistics, GLM, MLJ, Flux,
-   Turing 
+   Turing
 
 ## Doing simulation
 
@@ -134,7 +161,7 @@ DataFrames.jl and DFMeta.
 8. Learn about the simulation libraries (DiffEq, DynamicGrids)
 9. Learn how various statistics/simulation libraries work togethe
 
-# Discussion 
+# Discussion
 
 Defining a living standard for ecological data in `Julia` will make it easier to
 combine data from different sources by splitting the process of data aggregation
