@@ -198,59 +198,98 @@ Julia is a good language, ecologists should learn it.
 \hypertarget{outline}{%
 \section{Outline}\label{outline}}
 
+An ecologists guide to learning Julia
+
 \begin{itemize}
 \tightlist
 \item
-  Why should ecologists learn julia?
+  Why should ecologists learn Julia?
 
   \begin{itemize}
   \tightlist
   \item
-    Well, there are the criteria that are directly measureble that make
-    it better than R/Python:
+    No point ignoring the elephant in the room: R is by far the most
+    used language in ecology
+  \item
+    But many of the problems in contemporary ecology require
+    functionality that R just can't handle (mass individual-based
+    models, big data management, quick numerical methods)
+  \item
+    \texttt{julia} has particular features that solve a broad chunk of
+    the difficulties of computational analysis of ecological data
 
     \begin{itemize}
     \tightlist
     \item
-      fast
-    \item
-      native support on GPUs
+      and improves user experience by enabling code that is
+      \emph{idiomatic}.
     \end{itemize}
   \item
-    But there are also criteria that are more subjective, and that take
-    experience and practice using the language to appreciate
+    this makes julia well suited to become "{[}a platform for ecological
+    prediction and forecasting{]}; McIntyre etal, Urban etal
+  \end{itemize}
+\item
+  In what order should people approach new topics
+
+  \begin{itemize}
+  \tightlist
+  \item
+    understand the core concepts that make julia different from other
+    languages first
 
     \begin{itemize}
     \tightlist
     \item
-      clever use of dispatch patterns
+      Types
     \item
-      use of one-lienrs
-    \item
-      using parameterized types well
+      multiple dispatch
     \end{itemize}
   \item
-    You will learn how to be a better programmer in \emph{any} language,
-    because smart use of julia requires understanding some fundemantal
-    concepts in programming that are `hidden' from users in R/python
-  \item
-    The biggest reason \emph{not} to use julia is that the
-    ecology/evolution package ecosystem in R is larger, and the ML
-    ecosystem in python is more popular. However:
+    Learn data management in Julia (emphasize analogies to tidyverse)
 
     \begin{itemize}
     \tightlist
     \item
-      you can call \emph{any} R/python function/library using
-      RCall/PyCall in julia
-    \item
-      More packages isn't necessarily better when they don't work
-      together
+      DataFrames
     \end{itemize}
+  \item
+    Learn stats/ml in Julia (emphasize anologies to GLM in R and
+    scikit-learn/tensorflow in python)
+  \item
+    Learn visualization (Makie)
+  \end{itemize}
+\item
+  Discussion
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Talk about adjacent scientific computing course
+  \item
+    What does the future of computing in ecology look like?
   \end{itemize}
 \end{itemize}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\begin{longtable}[]{@{}l@{}}
+\toprule
+\endhead
+\begin{minipage}[t]{0.05\columnwidth}\raggedright
+- Why should ecologists learn julia? - Well, there are the criteria that
+are directly measurable that make it better than R/Python: - fast -
+native support on GPUs - But there are also criteria that are more
+subjective, and that take experience and practice using the language to
+appreciate - clever use of dispatch patterns - use of one-lienrs - using
+parameterized types well - You will learn how to be a better programmer
+in \emph{any} language, because smart use of julia requires
+understanding some fundemantal concepts in programming that are `hidden'
+from users in R/python - The biggest reason \emph{not} to use julia is
+that the ecology/evolution package ecosystem in R is larger, and the ML
+ecosystem in python is more popular. However: - you can call \emph{any}
+R/python function/library using RCall/PyCall in julia - More packages
+isn't necessarily better when they don't work together\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
 
 \hypertarget{abstract}{%
 \section{Abstract}\label{abstract}}
@@ -261,34 +300,11 @@ Julia is a good language, ecologists should learn it.
 \section{Introduction}\label{introduction}}
 
 In order to measure, understand, and mitigate the consequences of
-anthropogenic change on ecosystems the serives they provide, ecologists
-need a set of computational tools (Urban \emph{et al.} 2022). These
-tools must be performant, but crucially modular and interfaceable
-(McIntire \emph{et al.} 2022).
+anthropogenic change on ecosystems the services they provide, ecologists
+need a modern set of computational tools (Urban \emph{et al.} 2022).
 
-Ecological data is often difficult to access and reuse (Gonzalez \&
-Peres-Neto 2015; Poisot \emph{et al.} 2019). Many sources of ecological,
-evolutionary, and environmental data exist, but synthesizing this data
-into a single product suitable for analysis often remains tedious as
-data are not in formats that can be easily combined or interfaced. Here
-we propose that we can solve this problem through standardization
-(Zimmerman 2008)---developing a common definition such that data
-collected in a variety of contexts can be assimilated while minimizing
-the overhead of data cleaning and wrangling.
-
-A common representation of ecological data will have three primary
-benefits: it will \textbf{1}) enable new forms of analysis by making it
-easier to combine data from different sources (Heberling \emph{et al.}
-2021), \textbf{2)} enable continuous integration of new data for
-next-generation biodiversity monitoring (Kühl \emph{et al.} 2020), and
-\textbf{3)} aid in open sharing and reproducability of published results
-(Zimmerman 2008; Borregaard \& Hart 2016). Here, we briefly review
-approaches to data standardization developed in other fields, in order
-to determine what makes an open standard succeed in promoting data
-sharing, and what doesn't. Based on the properties of good standards we
-identify, we propose building a living standard for ecological data in
-the \texttt{Julia} programming language, and argue this is necessary to
-obtain the three primary benefits of standardization mentioned earlier.
+These tools must be performant, but crucially modular and interfaceable
+(McIntire \emph{et al.} 2022)
 
 The so-called ``two-language problem'' in computational science, where
 it is easier for a researcher to developer a prototype of a
@@ -301,6 +317,29 @@ wrappers around a compiled (often C++) base (e.g. tidyverse, keras,
 numpy, TensorFlow, scikit-learn, pandas, etc.). However, the skills
 required to use or debug---let alone write---scientific software in
 these lower level langauges is not often taught.
+
+Ecological data is often difficult to access and reuse (Gonzalez \&
+Peres-Neto 2015; Poisot \emph{et al.} 2019). Synthesizing data into a
+single product suitable for analysis often remains tedious as data are
+not in formats that can be easily combined or interfaced.
+
+Here we propose that we can solve this problem through standardization
+(Zimmerman 2008)---developing a common definition such that data
+collected in a variety of contexts can be assimilated while minimizing
+the overhead of data cleaning and wrangling. A common representation of
+ecological data will have three primary benefits: it will \textbf{1})
+enable new forms of analysis by making it easier to combine data from
+different sources (Heberling \emph{et al.} 2021), \textbf{2)} enable
+continuous integration of new data for next-generation biodiversity
+monitoring (Kühl \emph{et al.} 2020), and \textbf{3)} aid in open
+sharing and reproducability of published results (Zimmerman 2008;
+Borregaard \& Hart 2016). Here, we briefly review approaches to data
+standardization developed in other fields, in order to determine what
+makes an open standard succeed in promoting data sharing, and what
+doesn't. Based on the properties of good standards we identify, we
+propose building a living standard for ecological data in the
+\texttt{Julia} programming language, and argue this is necessary to
+obtain the three primary benefits of standardization mentioned earlier.
 
 We propose that that Julia has certain properties absent in other
 popular languages for scientific computing that make it particularly

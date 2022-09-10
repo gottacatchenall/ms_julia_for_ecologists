@@ -202,36 +202,56 @@
         
         <article>
             <h1 id="outline">Outline</h1>
+            <p>An ecologists guide to learning Julia</p>
             <ul>
-            <li>Why should ecologists learn julia?
+            <li>Why should ecologists learn Julia?
             <ul>
-            <li>Well, there are the criteria that are directly measureble that make it better than R/Python:
+            <li>No point ignoring the elephant in the room: R is by far the most used language in ecology</li>
+            <li>But many of the problems in contemporary ecology require functionality that R just can’t handle (mass individual-based models, big data management, quick numerical methods)</li>
+            <li><code>julia</code> has particular features that solve a broad chunk of the difficulties of computational analysis of ecological data
             <ul>
-            <li>fast</li>
-            <li>native support on GPUs</li>
+            <li>and improves user experience by enabling code that is <em>idiomatic</em>.</li>
             </ul></li>
-            <li>But there are also criteria that are more subjective, and that take experience and practice using the language to appreciate
-            <ul>
-            <li>clever use of dispatch patterns</li>
-            <li>use of one-lienrs</li>
-            <li>using parameterized types well</li>
+            <li>this makes julia well suited to become "[a platform for ecological prediction and forecasting]; McIntyre etal, Urban etal</li>
             </ul></li>
-            <li>You will learn how to be a better programmer in <em>any</em> language, because smart use of julia requires understanding some fundemantal concepts in programming that are ‘hidden’ from users in R/python</li>
-            <li>The biggest reason <em>not</em> to use julia is that the ecology/evolution package ecosystem in R is larger, and the ML ecosystem in python is more popular. However:
+            <li>In what order should people approach new topics
             <ul>
-            <li>you can call <em>any</em> R/python function/library using RCall/PyCall in julia</li>
-            <li>More packages isn’t necessarily better when they don’t work together</li>
+            <li>understand the core concepts that make julia different from other languages first
+            <ul>
+            <li>Types</li>
+            <li>multiple dispatch</li>
             </ul></li>
+            <li>Learn data management in Julia (emphasize analogies to tidyverse)
+            <ul>
+            <li>DataFrames</li>
+            </ul></li>
+            <li>Learn stats/ml in Julia (emphasize anologies to GLM in R and scikit-learn/tensorflow in python)</li>
+            <li>Learn visualization (Makie)</li>
+            </ul></li>
+            <li>Discussion
+            <ul>
+            <li>Talk about adjacent scientific computing course</li>
+            <li>What does the future of computing in ecology look like?</li>
             </ul></li>
             </ul>
-            <hr />
+            <table style="width:6%;">
+            <colgroup>
+            <col style="width: 5%" />
+            </colgroup>
+            <tbody>
+            <tr class="odd">
+            <td>- Why should ecologists learn julia? - Well, there are the criteria that are directly measurable that make it better than R/Python: - fast - native support on GPUs - But there are also criteria that are more subjective, and that take experience and practice using the language to appreciate - clever use of dispatch patterns - use of one-lienrs - using parameterized types well - You will learn how to be a better programmer in <em>any</em> language, because smart use of julia requires understanding some fundemantal concepts in programming that are ‘hidden’ from users in R/python - The biggest reason <em>not</em> to use julia is that the ecology/evolution package ecosystem in R is larger, and the ML ecosystem in python is more popular. However: - you can call <em>any</em> R/python function/library using RCall/PyCall in julia - More packages isn’t necessarily better when they don’t work together</td>
+            </tr>
+            </tbody>
+            </table>
             <h1 id="abstract">Abstract</h1>
             <hr />
             <h1 id="introduction">Introduction</h1>
-            <p>In order to measure, understand, and mitigate the consequences of anthropogenic change on ecosystems the serives they provide, ecologists need a set of computational tools <span class="citation" data-cites="Urban2022CodLif">(Urban <em>et al.</em> 2022)</span>. These tools must be performant, but crucially modular and interfaceable <span class="citation" data-cites="McIntire2022PerRei">(McIntire <em>et al.</em> 2022)</span>.</p>
-            <p>Ecological data is often difficult to access and reuse <span class="citation" data-cites="Poisot2019EcoDat Gonzalez2015ActSta">(Gonzalez &amp; Peres-Neto 2015; Poisot <em>et al.</em> 2019)</span>. Many sources of ecological, evolutionary, and environmental data exist, but synthesizing this data into a single product suitable for analysis often remains tedious as data are not in formats that can be easily combined or interfaced. Here we propose that we can solve this problem through standardization <span class="citation" data-cites="Zimmerman2008NewKno">(Zimmerman 2008)</span>—developing a common definition such that data collected in a variety of contexts can be assimilated while minimizing the overhead of data cleaning and wrangling.</p>
-            <p>A common representation of ecological data will have three primary benefits: it will <strong>1</strong>) enable new forms of analysis by making it easier to combine data from different sources <span class="citation" data-cites="Heberling2021DatInt">(Heberling <em>et al.</em> 2021)</span>, <strong>2)</strong> enable continuous integration of new data for next-generation biodiversity monitoring <span class="citation" data-cites="Kuhl2020EffBio">(Kühl <em>et al.</em> 2020)</span>, and <strong>3)</strong> aid in open sharing and reproducability of published results <span class="citation" data-cites="Borregaard2016MorRep Zimmerman2008NewKno">(Zimmerman 2008; Borregaard &amp; Hart 2016)</span>. Here, we briefly review approaches to data standardization developed in other fields, in order to determine what makes an open standard succeed in promoting data sharing, and what doesn’t. Based on the properties of good standards we identify, we propose building a living standard for ecological data in the <code>Julia</code> programming language, and argue this is necessary to obtain the three primary benefits of standardization mentioned earlier.</p>
+            <p>In order to measure, understand, and mitigate the consequences of anthropogenic change on ecosystems the services they provide, ecologists need a modern set of computational tools <span class="citation" data-cites="Urban2022CodLif">(Urban <em>et al.</em> 2022)</span>.</p>
+            <p>These tools must be performant, but crucially modular and interfaceable <span class="citation" data-cites="McIntire2022PerRei">(McIntire <em>et al.</em> 2022)</span></p>
             <p>The so-called “two-language problem” in computational science, where it is easier for a researcher to developer a prototype of a model/simulation in a high-level language, like Python or R, and later have to port the model to a lower-level compiled language because the performance of these compiled languages (e.g. C++/Fortran) is orders of magnitude faster than high level interpreted languages. In fact, many of the most popular tools in higher-level languages are actually thin wrappers around a compiled (often C++) base (e.g. tidyverse, keras, numpy, TensorFlow, scikit-learn, pandas, etc.). However, the skills required to use or debug—let alone write—scientific software in these lower level langauges is not often taught.</p>
+            <p>Ecological data is often difficult to access and reuse <span class="citation" data-cites="Poisot2019EcoDat Gonzalez2015ActSta">(Gonzalez &amp; Peres-Neto 2015; Poisot <em>et al.</em> 2019)</span>. Synthesizing data into a single product suitable for analysis often remains tedious as data are not in formats that can be easily combined or interfaced.</p>
+            <p>Here we propose that we can solve this problem through standardization <span class="citation" data-cites="Zimmerman2008NewKno">(Zimmerman 2008)</span>—developing a common definition such that data collected in a variety of contexts can be assimilated while minimizing the overhead of data cleaning and wrangling. A common representation of ecological data will have three primary benefits: it will <strong>1</strong>) enable new forms of analysis by making it easier to combine data from different sources <span class="citation" data-cites="Heberling2021DatInt">(Heberling <em>et al.</em> 2021)</span>, <strong>2)</strong> enable continuous integration of new data for next-generation biodiversity monitoring <span class="citation" data-cites="Kuhl2020EffBio">(Kühl <em>et al.</em> 2020)</span>, and <strong>3)</strong> aid in open sharing and reproducability of published results <span class="citation" data-cites="Borregaard2016MorRep Zimmerman2008NewKno">(Zimmerman 2008; Borregaard &amp; Hart 2016)</span>. Here, we briefly review approaches to data standardization developed in other fields, in order to determine what makes an open standard succeed in promoting data sharing, and what doesn’t. Based on the properties of good standards we identify, we propose building a living standard for ecological data in the <code>Julia</code> programming language, and argue this is necessary to obtain the three primary benefits of standardization mentioned earlier.</p>
             <p>We propose that that Julia has certain properties absent in other popular languages for scientific computing that make it particularly suited for the development of a cohesive, modular, and extendible set of tools ideal for the development of a platform for ecological analysis [@].</p>
             <h1 id="the-nature-of-computation-in-julia">The nature of computation in Julia</h1>
             <figure>
